@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--  TODO won component? -->
+    <div class="cards-list">
+      <pondus-component class="card">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum
+          officia corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
+        </p>
+      </pondus-component>
+      <pondus-component class="card">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum
+          officia corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
+        </p>
+      </pondus-component>
+      <pondus-component class="card">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum
+          officia corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
+        </p>
+      </pondus-component>
+    </div>
+
+    <!-- Component templates -->
+    <template id="pondus-component-template">
+      <div class="card-header">
+        <div class="header-image"></div>
+        <div class="card-header-text">
+          <div class="card-title">Pondus x</div>
+          <div class="card-subtitle">A Dog</div>
+        </div>
+      </div>
+      <img src="pondus-pics/0.jpg" class="image" />
+      <div class="card-content">
+        <slot></slot>
+      </div>
+    </template>
+
+    <!-- Import component logics -->
+    <script src="pondus-component/pondus-component.js"></script>
+  </body>
+</html>

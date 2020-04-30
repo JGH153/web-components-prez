@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi) ? "css/print/pdf.css" : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+    <style>
+      .bcc {
+        color: #2b6abc !important;
+      }
+
+      .slides {
+        width: 82% !important;
+      }
+
+      .med-text {
+        font-size: 60px;
+      }
+
+      .large-text {
+        font-size: 100px;
+      }
+
+      .normalcase {
+        text-transform: none !important;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        text-transform: none !important;
+      }
+
+      .flexrox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .browser-img {
+        width: 100px;
+        height: 100px;
+        margin: 0px !important;
+        margin-right: 10px !important;
+        background: unset !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      .no-img-outline {
+        margin: 0px !important;
+        margin-right: 10px !important;
+        background: unset !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      .big-emoji {
+        font-size: 100px;
+      }
+
+      .halfgone {
+        opacity: 0.5;
+      }
+
+      .rxjsc {
+        color: #c1185a;
+      }
+
+      .tab-and-arrow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+      }
+
+      .hidden-filler {
+        opacity: 0;
+        user-select: none;
+      }
+
+      .tab-icon {
+        width: 200px;
+      }
+      .arrows-icon {
+        width: 100px;
+      }
+
+      .angular {
+        color: #dd0031 !important;
+      }
+
+      .webrtc-orange {
+        color: #ff6600 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1><span class="bcc">Advanced</span> Broadcast channel API</h1>
+          <h2>With <span class="rxjsc">RxJS</span> and <span class="angular">Angular</span></h2>
+        </section>
+
+        <section>
+          <h1>📺 Watch part <span class="bcc">one</span> first</h1>
+        </section>
+
+        <section>
+          <h1>What you will <span class="bcc">learn</span></h1>
+          <h3 class="fragment">Practical example of <span class="bcc">Broadcast Channel</span></h3>
+          <h3 class="fragment">Tab to tab communication with <span class="rxjsc">RxJS</span></h3>
+          <h2 class="fragment">The common <span class="bcc">pitfalls</span></h2>
+        </section>
+<!-- 
+        <section>
+          <h1><span class="bcc">Demo</span></h1>
+        </section> -->
+
+        <section>
+          <h1 class="angular">Angular</h1>
+          <h3 class="fragment">My preferred <span class="bcc">framework</span></h3>
+          <h3 class="fragment">Will make a video in the <span class="bcc">future</span> 📺</h3>
+          <h3 class="fragment">Works best with <span class="rxjsc">RxJS</span></h3>
+        </section>
+
+        <section>
+          <section>
+            <h2>Let's dive into the <span class="bcc">code</span></h2>
+            <h3 class="fragment">All available in <span class="bcc">description</span></h3>
+          </section>
+          <section>
+            <h2>Card <span class="bcc">service</span></h2>
+            <h2 class="fragment">Cards <span class="bcc">page</span></h2>
+            <h2 class="fragment">Card details <span class="bcc">page</span></h2>
+            <h2 class="fragment">Broadcast Handler <span class="bcc">Service</span></h2>
+          </section>
+          <section>
+            <h2 class="">Broadcast Handler <span class="bcc">Service</span></h2>
+            <!--  show code in service -->
+            <h2 class="fragment"><span class="bcc">ACK</span> = acknowledgement</h2>
+            <h2 class="fragment"><span class="bcc">Conformation</span> of message</h2>
+            <!-- <h2 class="fragment">Two Generals' <span class="bcc">Problem</span></h2>
+            <h2 class="fragment">Assuming no <span class="bcc">lost</span> message</h2> -->
+            <!-- <h2 class="fragment">Each message can be received several times</h2> -->
+          </section>
+        </section>
+
+        <section>
+          <h1>More <span class="bcc">examples</span></h1>
+          <h2 class="fragment"><span class="bcc">Stock</span> application</h2>
+          <!-- with stocks synced from one master view? -->
+
+          <h2 class="fragment"><span class="bcc">Youtube</span></h2>
+          <!-- can have the playlist in its own vieo and look for next vieo in own windfow -->
+          <!-- already have solution, but all in one window -->
+        </section>
+
+        <section>
+          <section>
+            <h1>Desktop <span class="bcc">only</span></h1>
+            <!--  show market share groth -->
+            <h3 class="fragment">Multi-tab on <span class="bcc">mobile</span> is not good</h3>
+            <h3 class="fragment"><span class="bcc">Work</span> applications</h3>
+          </section>
+
+          <section>
+            <h2>The <span class="bcc">hidden</span> receiver</h2>
+            <h3 class="fragment">Hidden tabs are a <span class="bcc">problem</span></h3>
+            <h3 class="fragment">Can still <span class="bcc">receive</span> messages</h3>
+            <pre class="fragment"><code class="TypeScript" data-trim contenteditable>
+if(document.visibilityState === 'visible') {
+  // TODO
+}
+            </code></pre>
+            <pre class="fragment"><code class="TypeScript" data-trim contenteditable>
+if(document.visibilityState === 'hidden') {
+  // TODO
+}
+            </code></pre>
+            <!-- show BHS code -->
+          </section>
+
+          <section>
+            <h1><span class="bcc">Heartbeat</span> ❤️</h1>
+            <h3 class="fragment"><span class="bcc">Repeatedly check</span> if tab is present</h3>
+            <h3 class="fragment">Might <span class="bcc">miss</span> tab closing</h3>
+            <h3 class="fragment"><span class="bcc">Unstable</span> and <span class="bcc">unreliable</span></h3>
+            <h3 class="fragment">Can use window.<span class="bcc">onbeforeunload</span></h3>
+            <!--  will doe to low pro have varable heart times -->
+          </section>
+
+          <section>
+            <h2>The testing <span class="bcc">problem</span> 🕵️</h2>
+            <h3 class="fragment">Almost impossible to <span class="bcc">test</span></h3>
+            <h3 class="fragment">E2E like <span class="bcc">cypress</span> have one tab limit</h3>
+            <h3 class="fragment">Need to <span class="bcc">mock and fake</span> for testing</h3>
+            <h3 class="fragment"><span class="bcc">Limit</span> what Broadcast channel does</h3>
+            <!-- With for example updating URL, instead of setting data directly -->
+            <!-- show code -->
+          </section>
+
+          <!-- <section>
+            <h2><span class="bcc">Linked</span> tabs ⛓️</h2>
+            <h3 class="fragment">User don't know witch <span class="bcc">talk</span> to each other</h3>
+             cut to popup showing syced
+          </section> -->
+        </section>
+
+        <section>
+          <h2>Sending to another <span class="bcc">computer</span></h2>
+          <h1 class="fragment webrtc-orange">WebRTC</h1>
+          <h2 class="fragment">Subscribe for <span class="bcc">video</span> 📺</h2>
+        </section>
+
+        <section>
+          <h1>The advanced</h1>
+          <h1><span class="bcc">Broadcast channel</span> API</h1>
+        </section>
+
+        <section>
+          <pre class=""><code class="bash" data-trim contenteditable>
+            ng new BroadcastDemo
+            // With router and scss
+          </code></pre>
+          <pre class=""><code class="bash" data-trim contenteditable>
+            ng add @angular/material
+            // with Purple/Green, and yes
+          </code></pre>
+          <pre class=""><code class="bash" data-trim contenteditable>
+            npm install --save normalize.css
+            // Add to styles.scss
+          </code></pre>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        history: true,
+        hash: true,
+        controls: false,
+        progress: false,
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/highlight/highlight.js" },
+          { src: "plugin/notes/notes.js", async: true },
+        ],
+      });
+    </script>
+  </body>
+</html>
