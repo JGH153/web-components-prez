@@ -12,7 +12,7 @@
     <cards-list></cards-list>
 
     <!-- Component templates -->
-    <template id="pondus-component-template">
+    <template id="card-template">
       <div class="card-header">
         <div class="header-image"></div>
         <div class="card-header-text">
@@ -20,7 +20,7 @@
           <div class="card-subtitle">A Dog</div>
         </div>
       </div>
-      <img src="pondus-pics/0.jpg" class="image" id="pondus-img" />
+      <img src="pondus-pics/0.jpg" class="image" id="card-img" />
       <div class="card-content">
         <p>
           <slot></slot>
@@ -29,15 +29,15 @@
     </template>
 
     <template id="cards-list-template">
-      <pondus-component class="card" id="testId" pondus-id="1">
+      <card-component class="card" id="testId" image-name="1.jpg" card-title="Pondus 1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum officia
         corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
-      </pondus-component>
+      </card-component>
     </template>
 
     <!-- Import component logics -->
-    <script src="pondus-component/pondus-component.js"></script>
-    <script src="cards-list/cards-list.js"></script>
+    <script src="card-component/card-component.js"></script>
+    <script src="cards-list-component/cards-list-component.js"></script>
 
     <script>
 
