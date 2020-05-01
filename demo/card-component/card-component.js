@@ -1,6 +1,5 @@
 class CardComponent extends HTMLElement {
-  shadow;
-  randID = Math.floor(Math.random() * 1000);
+  shadow; //components "document" element
   imageName = '';
   cardTitle = 'abc';
 
@@ -10,7 +9,6 @@ class CardComponent extends HTMLElement {
   constructor() {
     // Always call super first in constructor
     super();
-    console.log('constructor', this.randID);
 
     this.setupShadow();
     this.addCss();

@@ -1,6 +1,5 @@
 class CardsListComponent extends HTMLElement {
   constructor() {
-    // Always call super first in constructor
     super();
 
     this.setupShadow();
@@ -33,6 +32,7 @@ class CardsListComponent extends HTMLElement {
       const newElement = document.createElement('card-component');
       newElement.setAttribute('image-name', i + '.jpg');
       newElement.setAttribute('card-title', 'Pondus ' + i);
+      newElement.classList = 'card';
       newElement.innerHTML = `
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum officia
 				corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
