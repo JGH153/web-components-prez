@@ -36,24 +36,3 @@ html {
   border-left: 2px solid #424242;
   border-right: 2px solid #424242;
 }
-
-/* */
-
-.cards-list {
-  display: grid;
-  gap: 1rem;
-  padding: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-}
-
-.card {
-  cursor: pointer;
-}
-
-/*  not working TODO fix */
-.card:hover {
-  transform: scale(1.05);
-}
-.card:active {
-  transform: scale(0.95);
-}

@@ -1,0 +1,17 @@
+:host {
+	display: grid;
+	gap: 1rem;
+	padding: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+.card {
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+.card:active {
+  transform: scale(0.95);
+}

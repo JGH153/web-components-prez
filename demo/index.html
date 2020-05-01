@@ -8,27 +8,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!--  TODO won component? -->
-    <div class="cards-list">
-      <pondus-component class="card">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum
-          officia corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
-        </p>
-      </pondus-component>
-      <pondus-component class="card">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum
-          officia corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
-        </p>
-      </pondus-component>
-      <pondus-component class="card">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum
-          officia corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
-        </p>
-      </pondus-component>
-    </div>
+    <!-- body content -->
+    <cards-list></cards-list>
 
     <!-- Component templates -->
     <template id="pondus-component-template">
@@ -39,13 +20,27 @@
           <div class="card-subtitle">A Dog</div>
         </div>
       </div>
-      <img src="pondus-pics/0.jpg" class="image" />
+      <img src="pondus-pics/0.jpg" class="image" id="pondus-img" />
       <div class="card-content">
-        <slot></slot>
+        <p>
+          <slot></slot>
+        </p>
       </div>
+    </template>
+
+    <template id="cards-list-template">
+      <pondus-component class="card" id="testId" pondus-id="1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum officia
+        corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
+      </pondus-component>
     </template>
 
     <!-- Import component logics -->
     <script src="pondus-component/pondus-component.js"></script>
+    <script src="cards-list/cards-list.js"></script>
+
+    <script>
+
+    </script>
   </body>
 </html>
