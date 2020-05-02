@@ -1,13 +1,16 @@
+'use strict';
 class CardsListComponent extends HTMLElement {
+  lastCardIndex = 0;
+
   constructor() {
     super();
 
     this.setupShadow();
-    this.addCss();
   }
 
   connectedCallback() {
     this.setupCards();
+    this.setupClickListener();
   }
 
   setupShadow() {
@@ -17,28 +20,44 @@ class CardsListComponent extends HTMLElement {
     this.shadow.appendChild(templateContent.cloneNode(true));
   }
 
-  addCss() {
-    const linkElem = document.createElement('link');
-    linkElem.setAttribute('rel', 'stylesheet');
-    // relative to index.html
-    linkElem.setAttribute('href', 'cards-list-component/cards-list-component.css');
+  setupCards() {
+    // Add for card already present
+    this.shadow.querySelector('card-component').addEventListener('DeleteCard', () => this.removeCard(0));
 
-    // Attach the created element to the shadow dom
-    this.shadow.appendChild(linkElem);
+    while (this.lastCardIndex < 9) {
+      this.lastCardIndex++;
+      this.appendNewCard(this.lastCardIndex);
+    }
   }
 
-  setupCards() {
-    for (let i = 2; i <= 10; i++) {
-      const newElement = document.createElement('card-component');
-      newElement.setAttribute('image-name', i + '.jpg');
-      newElement.setAttribute('card-title', 'Pondus ' + i);
-      newElement.classList = 'card';
-      newElement.innerHTML = `
+  appendNewCard(id) {
+    const newElement = document.createElement('card-component');
+    newElement.setAttribute('image-name', id + 1 + '.jpg');
+    newElement.setAttribute('card-title', 'Pondus ' + (id + 1));
+    newElement.id = 'card-' + id;
+    newElement.classList = 'card';
+    newElement.innerHTML = `
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum officia
 				corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
 			`;
-      this.shadow.appendChild(newElement);
-    }
+    const container = this.shadow.querySelector('.cards-list');
+    newElement.addEventListener('DeleteCard', () => this.removeCard(id));
+    container.appendChild(newElement);
+  }
+
+  setupClickListener() {
+    const button = this.shadow.getElementById('add-card-button');
+    button.addEventListener('click', (e) => this.addCard());
+  }
+
+  addCard() {
+    console.log('adddd');
+    this.lastCardIndex++;
+    this.appendNewCard(this.lastCardIndex);
+  }
+
+  removeCard(index) {
+    this.shadow.getElementById('card-' + index).remove();
   }
 }
 

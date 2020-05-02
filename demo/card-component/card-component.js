@@ -1,3 +1,4 @@
+'use strict';
 class CardComponent extends HTMLElement {
   shadow; //components "document" element
   imageName = '';
@@ -9,42 +10,35 @@ class CardComponent extends HTMLElement {
   constructor() {
     // Always call super first in constructor
     super();
+    console.log('CardComponent constructor')
 
     this.setupShadow();
-    this.addCss();
+    // this.addCssDynamic();
   }
 
-  // TODO fix why !isConnected
   connectedCallback() {
-    //connectedCallback may be called once element is no longer connected,
-    if (!this.hasAttribute(CardComponent.imageNameAttrName)) {
-      console.error('missing ', CardComponent.imageNameAttrName);
-      return;
-    }
-
-    if (!Node.isConnected) {
-      console.log('not connected');
-      return;
-    }
-    console.log('connected');
+    console.log('CardComponent connected');
+    this.setupClickListener();
   }
 
   disconnectedCallback() {
-    console.log('disconnected');
+    console.log('CardComponent disconnected');
+    const button = this.shadow.getElementById('remove-button');
+    button.removeEventListener('click', (e) => this.cardClicked());
   }
 
   adoptedCallback() {
-    console.log('adoptedCallback');
+    console.log('CardComponent adoptedCallback');
   }
 
   //called before constructor
   static get observedAttributes() {
-    console.log('observedAttributes');
+    console.log('CardComponent observedAttributes');
     return [CardComponent.imageNameAttrName, CardComponent.cardTitleAttrName];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    console.log('Attributes changed: ', name, oldValue, newValue);
+    // console.log('CardComponent Attributes changed: ', name, oldValue, newValue);
     if (name === CardComponent.imageNameAttrName) {
       this.imageName = this.getAttribute(CardComponent.imageNameAttrName);
       this.updateImage();
@@ -62,7 +56,7 @@ class CardComponent extends HTMLElement {
     const shadowRoot = this.shadow.appendChild(templateContent.cloneNode(true));
   }
 
-  addCss() {
+  addCssDynamic() {
     const linkElem = document.createElement('link');
     linkElem.setAttribute('rel', 'stylesheet');
     // relative to index.html
@@ -70,6 +64,17 @@ class CardComponent extends HTMLElement {
 
     // Attach the created element to the shadow dom
     this.shadow.appendChild(linkElem);
+  }
+
+  setupClickListener() {
+    const button = this.shadow.getElementById('remove-button');
+    button.addEventListener('click', (e) => this.cardClicked());
+  }
+
+  cardClicked() {
+    console.log('clicked!', this.cardTitle);
+    var event = new Event('DeleteCard');
+    this.dispatchEvent(event); // not on shadow, but on this
   }
 
   updateImage() {

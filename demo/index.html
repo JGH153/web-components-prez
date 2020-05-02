@@ -13,6 +13,9 @@
 
     <!-- Component templates -->
     <template id="card-template">
+      <link rel="stylesheet" href="normalize.css"></link>
+      <link rel="stylesheet" href="theme.css"></link>
+      <link rel="stylesheet" href="card-component/card-component.css"></link>
       <div class="card-header">
         <div class="header-image"></div>
         <div class="card-header-text">
@@ -26,13 +29,26 @@
           <slot></slot>
         </p>
       </div>
+      <div class="buttons">
+        <button class="button" id="remove-button">Remove</button>
+        <!-- <button class="button" onclick="cardClicked()">Remove</button>
+        <button class="button" onclick="cardClicked">Remove</button> -->
+      </div>
     </template>
 
     <template id="cards-list-template">
-      <card-component class="card" id="testId" image-name="1.jpg" card-title="Pondus 1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum officia
-        corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
-      </card-component>
+      <link rel="stylesheet" href="normalize.css"></link>
+      <link rel="stylesheet" href="theme.css"></link>
+      <link rel="stylesheet" href="cards-list-component/cards-list-component.css"></link>
+      <div class="cards-list">
+        <card-component class="card" id="firstCard" image-name="1.jpg" card-title="Pondus 1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum officia
+          corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
+        </card-component>
+      </div>
+      <div class="buttons">
+        <button class="button" id="add-card-button">Add Card</button>
+      </div>
     </template>
 
     <!-- Import component logics -->

@@ -53,3 +53,8 @@
   font-size: 14px;
   margin-bottom: 0;
 }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
