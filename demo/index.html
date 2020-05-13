@@ -16,34 +16,41 @@
       <link rel="stylesheet" href="normalize.css"></link>
       <link rel="stylesheet" href="theme.css"></link>
       <link rel="stylesheet" href="card-component/card-component.css"></link>
+
       <div class="card-header">
         <div class="header-image"></div>
         <div class="card-header-text">
-          <div class="card-title">Pondus x</div>
+          <div class="card-title">
+            <slot name="title">
+          </div>
           <div class="card-subtitle">A Dog</div>
         </div>
       </div>
       <img src="pondus-pics/0.jpg" class="image" id="card-img" />
       <div class="card-content">
         <p>
-          <slot></slot>
+          <slot name="content"></slot>
         </p>
       </div>
       <div class="buttons">
         <button class="button" id="remove-button">Remove</button>
-        <!-- <button class="button" onclick="cardClicked()">Remove</button>
-        <button class="button" onclick="cardClicked">Remove</button> -->
       </div>
     </template>
+
+
 
     <template id="cards-list-template">
       <link rel="stylesheet" href="normalize.css"></link>
       <link rel="stylesheet" href="theme.css"></link>
       <link rel="stylesheet" href="cards-list-component/cards-list-component.css"></link>
+
       <div class="cards-list">
         <card-component class="card" id="firstCard" image-name="1.jpg" card-title="Pondus 1">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum officia
-          corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
+          <span slot="title">Pondus 1</span>
+          <span slot="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum officia
+            corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
+          </span>
         </card-component>
       </div>
       <div class="buttons">

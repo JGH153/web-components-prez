@@ -2,10 +2,8 @@
 class CardComponent extends HTMLElement {
   shadow; //components "document" element
   imageName = '';
-  cardTitle = 'abc';
 
   static imageNameAttrName = 'image-name';
-  static cardTitleAttrName = 'card-title';
 
   constructor() {
     // Always call super first in constructor
@@ -34,7 +32,7 @@ class CardComponent extends HTMLElement {
   //called before constructor
   static get observedAttributes() {
     console.log('CardComponent observedAttributes');
-    return [CardComponent.imageNameAttrName, CardComponent.cardTitleAttrName];
+    return [CardComponent.imageNameAttrName];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -42,10 +40,6 @@ class CardComponent extends HTMLElement {
     if (name === CardComponent.imageNameAttrName) {
       this.imageName = this.getAttribute(CardComponent.imageNameAttrName);
       this.updateImage();
-    }
-    if (name === CardComponent.cardTitleAttrName) {
-      this.cardTitle = this.getAttribute(CardComponent.cardTitleAttrName);
-      this.updateTitle();
     }
   }
 
@@ -80,12 +74,6 @@ class CardComponent extends HTMLElement {
   updateImage() {
     const image = this.shadow.getElementById('card-img');
     image.src = 'pondus-pics/' + this.imageName;
-  }
-
-  updateTitle() {
-    // can't use getElementsByClassName
-    const title = this.shadow.querySelectorAll('.card-title')[0];
-    title.innerHTML = this.cardTitle;
   }
 }
 

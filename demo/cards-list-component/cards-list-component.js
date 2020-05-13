@@ -31,14 +31,17 @@ class CardsListComponent extends HTMLElement {
   }
 
   appendNewCard(id) {
+    const cardTitle = 'Pondus ' + (id + 1);
     const newElement = document.createElement('card-component');
     newElement.setAttribute('image-name', id + 1 + '.jpg');
-    newElement.setAttribute('card-title', 'Pondus ' + (id + 1));
     newElement.id = 'card-' + id;
     newElement.classList = 'card';
     newElement.innerHTML = `
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum officia
-				corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
+      <span slot="title">${cardTitle}</span>
+      <span slot="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum officia
+        corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
+      </span>
 			`;
     const container = this.shadow.querySelector('.cards-list');
     newElement.addEventListener('DeleteCard', () => this.removeCard(id));
