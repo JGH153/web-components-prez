@@ -68,7 +68,7 @@ class CardComponent extends HTMLElement {
   cardClicked() {
     console.log('clicked!', this.cardTitle);
     var event = new Event('DeleteCard');
-    this.dispatchEvent(event); // not on shadow, but on this
+    this.dispatchEvent(event); // not on shadow, but on this root element
   }
 
   updateImage() {

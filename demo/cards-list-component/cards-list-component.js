@@ -42,7 +42,8 @@ class CardsListComponent extends HTMLElement {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus id aut aliquam in nostrum officia
         corporis quam sit fuga blanditiis tempore rerum nobis, aspernatur, adipisci illo, vero et inventore.
       </span>
-			`;
+      `;
+      
     const container = this.shadow.querySelector('.cards-list');
     newElement.addEventListener('DeleteCard', () => this.removeCard(id));
     container.appendChild(newElement);
