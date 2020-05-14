@@ -242,8 +242,9 @@
     <div class="reveal">
       <div class="slides">
         <section>
+          <!--  show what we will make -->
           <h1 class="web-components">Web components</h1>
-          <h2 class="web-components">Everything you need to know</h2>
+          <h2 class="">Everything you need to know</h2>
         </section>
 
         <section class="smallerH1">
@@ -253,144 +254,165 @@
         </section>
 
         <section>
-          More low level than you think
-          A lot of control
-          Exist to solve the problem of reusable components
+          <h1>Creating a <span class="web-components">web component</span></h1>
         </section>
 
         <section>
-          Can use evrywhere 
-          and in all frameworks
-          Angular and Vue can compile to web comps
+          <h1>Low level</h1>
+          <h1 class="fragment">A lot of control</h1>
+          <h3 class="fragment">Exist to solve the problem of reusable components</h3>
         </section>
 
         <section>
-          Many features of web componens worke the same as Angular
+          <h1>Can use everywhere</h1>
+          <h2 class="fragment">In all frameworks</h2>
+          <h3 class="fragment"><span class="angular">Angular</span> and <span class="vue">Vue</span> can compile to <span class="web-components">web components</span></h3>
         </section>
 
         <section>
-          Can use each web component feature seperatly, 
-          but meant to be used togheter
+          <h2>Parts of <span class="angular">Angular</span> similar to <span class="web-components">web&nbsp;components</span></h2>
+          <h2>Easier to learn</h2>
+          <!-- examples -->
+          <!-- view encapsulation -->
+          <!-- input and putputs -->
+          <!-- components -->
         </section>
 
         <section>
-          Open vs Closed shadow
-          if the shadow root's internal features are accessible from JavaScript
-          Apple want closed, rest want open
+          <h2>Can use each <span class="web-components">web component</span> feature separately</h2>
+          <h2 class="js fragment">Custom elements (JS)</h2>
+          <h2 class="html fragment">HTML templates (HTML)</h2>
+          <h2 class="css fragment">Shadow DOM (CSS)</h2>
+          <h2 class="fragment">Meant to be used together</h2>
         </section>
 
         <section>
-          Inn and out
-          Inputs as attributes
-          Outputs as events
-          DO NOT pass functions
-          Harder to test and less mudular and reuable
+          <h2>Open vs Closed <span class="css">shadow</span></h2>
+          <h3 class="fragment">shadow root's internal accessible from <span class="js">JS</span></h3>
+          <h2 class="fragment">Apple want closed, rest want open</h2>
         </section>
 
         <section>
-          Will become a core way to build websites
-          or atleast at trhe core of front end frameworks
+          <h1>Inputs and outputs</h1>
+          <h2 class="fragment">Inputs as attributes</h2>
+          <h2 class="fragment">Outputs as events</h2>
+          <h2 class="fragment">DO NOT pass functions</h2>
+          <h2 class="fragment">Harder to test, less modular, and reusable</h2>
         </section>
 
         <section>
-          Material design
-          Component library
-          In Angular, Vue, React
-          The same kode more than 3 times...
-          Why not write once?
-          material components web components
+          <h2>Will become a core way to build websites</h2>
+          <h2 class="fragment">or the core of front end frameworks</h2>
         </section>
 
         <section>
-          Browser support
-          Good, but no IE
+          <h1>Material design</h1>
+          <h2 class="fragment">Component library</h2>
+          <h2 class="fragment">In <span class="angular">Angular</span>, <span class="vue">Vue</span>, <span class="react">React</span></h2>
+          <h2 class="fragment">The same code more than 3 times...</h2>
+          <h2 class="fragment">Why not write once?</h2>
+          <h2 class="fragment">material-components-web-components</h2>
         </section>
 
         <section>
-          Can extend exsisting elemnts like div
-          Will only focus on fully custom elements
+          <h1>Browser support</h1>
+          <div class="flexrox">
+            <img src="media/browsers/chrome.svg" class="browser-img fragment" />
+            <img src="media/browsers/ff.svg" class="browser-img fragment" />
+            <img src="media/browsers/opera icon.svg" class="browser-img fragment" />
+            <img src="media/browsers/edge.svg" class="browser-img fragment" />
+            <img src="media/browsers/safari.svg" class="browser-img fragment" />
+          </div>
+          <h2 class="fragment">Good, but no IE</h2>
         </section>
 
         <section>
-          Template vsa innerHTML
-          innerHTML is ugly nad breaks seperations of concerns
+          <h2>Can extend existing elements like div</h2>
+          <!-- show example! -->
+          <h2 class="fragment">Will only focus on fully <span class="js">custom elements</span>
         </section>
 
         <section>
-          Slot
-          Slots name
+          <h1><span class="html">Template</span> vs innerHTML</h1>
+          <h3 class="fragment">innerHTML is ugly nnd breaks separation of concerns</h3>
         </section>
 
         <section>
-          ShadowDom
-          Cant apply css from outside
-          no more ::shadow and /deep/
-          Exept css varables
-          :host & :host()
-          Load from template or js class
-        </section>
-        <section>
-          Use :host() to enable outside css configuration
+          <h1>Slot</h1>
+          <h1 class="fragment">Slots name</h1>
         </section>
 
         <section>
-          <section>
-            Tips  ng trics 
-            smaller projects
-          </section>
-          <section>
-            Style classes, not elements names
-            Will not be changed by auto rename
-          </section>
-          <section>
-            Tips  ng trics
-            Use bigger projects
-          </section>
-          <section>
-            use Typescript
-            And SCSS
-          </section>
-
-          <section>
-            Consider adding framework on top 
-            like Polymer Project
-            or Stencil.js
-            Or create the next big framework
-          </section>
+          <h1><span class="css">ShadowDom</span></h1>
+          <h2 class="fragment">Cant apply CSS from outside</h2>
+          <h2 class="fragment">No more ::shadow and /deep/</h2>
+          <h2 class="fragment">Except <span class="css">CSS</span> variables</h2>
+          <h2 class="fragment">:host</h2>
+          <h2 class="fragment">Load from <span class="html">template</span> or js class</h2>
+        </section>
+        <section>
+          <h1>Use :host()</h1>
+          <h2 class="fragment">Enable outside <span class="css">CSS</span> configuration</h2>
         </section>
 
         <section>
           <section>
-            Challenges
+            <h1>Tips n tricks</h1> 
+            <h2 class="fragment">Smaller projects</h2>
           </section>
           <section>
-            No HTML loop
+            <h2>Style classes, not elements names</h2>
+            <h2 class="fragment">Will not be changed by auto rename</h2>
           </section>
           <section>
-            Cant call class function from template
+            <h1>Tips n tricks</h1> 
+            <h2 class="fragment">For bigger projects</h2>
           </section>
           <section>
-            Two different elemnts can share one class
+            <h1 class="">Use <span class="scss">SCSS</span></h1>
+            <h1 class="fragment">Embrace <span class="typescript">Typescript</span></h1>
           </section>
+
           <section>
-            No html import
-            Can do fetch request
-            Build system
-            No easy solution
-          </section>
-          <section>
-            Global styles, normaliZe and reset
-            Do not penetrate
-            Need to apply manually to all components
-            Will get solution in future like (CSS modules? Themes?)
-          </section>
-          <section>
-            Not opiniated, ut to you
+            <h2>Consider using framework on top </h2>
+            <h2 class="fragment">like Polymer Project</h2>
+            <h2 class="fragment">or Stencil.js</h2>
+            <h2 class="fragment">Or create the next big framework</h2>
           </section>
         </section>
 
         <section>
-          Conclution?
+          <section>
+            <h1>Challenges</h1>
+          </section>
+          <section>
+            <h1>No <span class="html">HTML</span> loop</h1>
+          </section>
+          <section>
+            <h2>Cant call class function from <span class="html">template</span></h2>
+          </section>
+          <section>
+            <h2>Two different elements can share one class</h2>
+          </section>
+          <section>
+            <h1>No <span class="html">HTML</span> import</h1>
+            <h2 class="fragment">Can do fetch request</h2>
+            <h2 class="fragment">Build system</h2>
+            <h2 class="fragment">No easy solution</h2>
+          </section>
+          <section>
+            <h2>Global styles, normalize and reset</h2>
+            <h2 class="fragment">Do not penetrate <span class="css">ShadowDom</span></h2>
+            <h2 class="fragment">Need to apply manually to all components</h2>
+            <h2 class="fragment">Will get solution in future like (<span class="css">CSS</span> modules? Themes?)</h2>
+          </section>
+          <section>
+            <h2>Not opinionated, up to you</h2>
+          </section>
+        </section>
+
+        <section>
+          <h1>Conclusion?</h1>
         </section>
 
         <section class="black-stroke" data-background="media/stock/adventureOver.jpeg">
