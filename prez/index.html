@@ -276,44 +276,9 @@
         </section>
 
         <section>
-          <h1>Write once</h1>
-          <h1 class="fragment">Use everywhere</h1>
-          <h1 class="fragment">In all <span class="frameworks">frameworks</span></h1>
-          <div class="flexrox">
-            <img src="media/logos/vue1.png" class="framework-img fragment" />
-            <img src="media/logos/angular1.png" class="framework-img fragment" />
-            <img src="media/logos/react.png" class="framework-img fragment" />
-          </div>
-        </section>
-
-        <!-- <section> -->
-        <!-- <h2>Parts of <span class="angular">Angular</span> similar to <span class="web-components">web&nbsp;components</span></h2> -->
-        <!-- <h2>Easier to learn</h2> -->
-        <!-- examples -->
-        <!-- view encapsulation -->
-        <!-- input and putputs -->
-        <!-- components -->
-        <!-- </section>74 -->
-
-        <section>
-          <h1>Performance</h1>
-          <h2 class="fragment">Native <span class="web-components">components</span></h2>
-          <h2 class="fragment">Tiny bundle size</h2>
-          <h2 class="fragment">Amazing runtime performance</h2>
-        </section>
-
-        <!-- <section>
-          <h2>Can use each <span class="web-components">web component</span> feature separately</h2>
-          <h2 class="js fragment">Custom elements (JS)</h2>
-          <h2 class="html fragment">HTML templates (HTML)</h2>
-          <h2 class="css fragment">Shadow DOM (CSS)</h2>
-          <h2 class="fragment">Meant to be used together</h2>
-        </section> -->
-
-        <section>
-          <h2>Open vs Closed <span class="css">shadow</span></h2>
-          <h3 class="fragment">Shadow root's internal accessible from <span class="js">JS</span></h3>
-          <h2 class="fragment">Apple want closed, rest want open</h2>
+          <h1><span class="html">Template</span> vs <span class="html">innerHTML</span></h1>
+          <h3 class="fragment"><span class="html">innerHTML</span> breaks separation of concerns</h3>
+          <h2 class="fragment"><span class="html">innerHTML</span> is ugly</h2>
         </section>
 
         <section>
@@ -327,14 +292,29 @@
         </section>
 
         <section>
-          <h1>Material design</h1>
-          <!-- <h2 class="fragment">Component library</h2> -->
-          <h2 class="fragment">
-            <span class="angular">Angular material</span>, <span class="vue">Vuetify</span>,
-            <span class="react">Material UI</span>
-          </h2>
-          <h2 class="fragment">The same code more than 3 times...</h2>
-          <h3 class="fragment web-components">material-components-web-components</h3>
+          <h1><span class="css">ShadowDom</span></h1>
+          <h2 class="fragment">Cant apply <span class="css">CSS</span> from outside</h2>
+          <h2 class="fragment">No more <span class="css">::shadow</span> and <span class="css">/deep/</span></h2>
+          <h2 class="fragment">Except <span class="css">CSS</span> variables</h2>
+          <h2 class="fragment">:host</h2>
+          <h2 class="fragment">Load from <span class="html">template</span> or <span class="js">js</span> class</h2>
+        </section>
+        <section>
+          <h1>Use :host()</h1>
+          <h2 class="fragment">Enable outside <span class="css">CSS</span> configuration</h2>
+        </section>
+
+        <section>
+          <h2>Open vs Closed <span class="css">shadow</span></h2>
+          <h3 class="fragment">Shadow root's internal accessible from <span class="js">JS</span></h3>
+          <h2 class="fragment">Apple want closed, rest want open</h2>
+        </section>
+
+        <section>
+          <h1 class="slot">Content projection</h1>
+          <h1 class="fragment"><span class="html">HTML</span> input</h1>
+          <h1 class="fragment slot">Slot</h1>
+          <h1 class="fragment">Named <span class="slot">Slots</span></h1>
         </section>
 
         <section>
@@ -349,35 +329,33 @@
           <h2 class="fragment">Good, but no <span class="ie">IE</span></h2>
         </section>
 
-        <!-- <section>
-          <h2>Can extend existing elements like div</h2>
-          <h2 class="fragment">Will only focus on fully <span class="js">custom elements</span></h2>
-        </section> -->
-
         <section>
-          <h1><span class="html">Template</span> vs <span class="html">innerHTML</span></h1>
-          <h3 class="fragment"><span class="html">innerHTML</span> breaks separation of concerns</h3>
-          <h2 class="fragment"><span class="html">innerHTML</span> is ugly</h2>
+          <h1>Write once</h1>
+          <h1 class="fragment">Use everywhere</h1>
+          <h1 class="fragment">In all <span class="frameworks">frameworks</span></h1>
+          <div class="flexrox">
+            <img src="media/logos/vue1.png" class="framework-img fragment" />
+            <img src="media/logos/angular1.png" class="framework-img fragment" />
+            <img src="media/logos/react.png" class="framework-img fragment" />
+          </div>
         </section>
 
         <section>
-          <h1 class="slot">Content projection</h1>
-          <h1 class="fragment"><span class="html">HTML</span> input</h1>
-          <h1 class="fragment slot">Slot</h1>
-          <h1 class="fragment">Named <span class="slot">Slots</span></h1>
+          <h1>Material design</h1>
+          <!-- <h2 class="fragment">Component library</h2> -->
+          <h2 class="fragment">
+            <span class="angular">Angular material</span>, <span class="vue">Vuetify</span>,
+            <span class="react">Material UI</span>
+          </h2>
+          <h2 class="fragment">The same code more than 3 times...</h2>
+          <h3 class="fragment web-components">material-components-web-components</h3>
         </section>
 
         <section>
-          <h1><span class="css">ShadowDom</span></h1>
-          <h2 class="fragment">Cant apply <span class="css">CSS</span> from outside</h2>
-          <h2 class="fragment">No more <span class="css">::shadow</span> and <span class="css">/deep/</span></h2>
-          <h2 class="fragment">Except <span class="css">CSS</span> variables</h2>
-          <h2 class="fragment">:host</h2>
-          <h2 class="fragment">Load from <span class="html">template</span> or <span class="js">js</span> class</h2>
-        </section>
-        <section>
-          <h1>Use :host()</h1>
-          <h2 class="fragment">Enable outside <span class="css">CSS</span> configuration</h2>
+          <h1>Performance</h1>
+          <h2 class="fragment">Native <span class="web-components">components</span></h2>
+          <h2 class="fragment">Tiny bundle size</h2>
+          <h2 class="fragment">Amazing runtime performance</h2>
         </section>
 
         <section>
@@ -419,9 +397,6 @@
           <section>
             <h2>Cant call class function from <span class="html">template</span></h2>
           </section>
-          <!-- <section>
-            <h2>Two different elements can share one class</h2>
-          </section> -->
           <section>
             <h1>No <span class="html">HTML</span> import</h1>
             <h2 class="fragment">Can do fetch request</h2>
