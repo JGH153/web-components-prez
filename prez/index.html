@@ -23,8 +23,12 @@
       document.getElementsByTagName("head")[0].appendChild(link);
     </script>
     <style>
-      .slides {
-        width: 82% !important;
+
+      /* only for prez, not for speaker view */
+      @media screen and (min-width: 1500px) {
+        .slides {
+          width: 82% !important;
+        }
       }
 
       .med-text {
@@ -272,7 +276,7 @@
         <section>
           <h1>Low level</h1>
           <h1 class="fragment">A lot of <span class="js">control</span></h1>
-          <h2 class="fragment">Re-usable <span class="web-components">components</span></h2>
+          <!-- <h2 class="fragment">Re-usable <span class="web-components">components</span></h2> -->
         </section>
 
         <section>
@@ -292,8 +296,15 @@
         </section>
 
         <section>
+          <h1 class="slot">Content projection</h1>
+          <h1 class="fragment"><span class="html">HTML</span> input</h1>
+          <h1 class="fragment slot">Slot</h1>
+          <h1 class="fragment">Named <span class="slot">Slots</span></h1>
+        </section>
+
+        <section>
           <h1><span class="css">ShadowDom</span></h1>
-          <h2 class="fragment">Cant apply <span class="css">CSS</span> from outside</h2>
+          <h2 class="fragment">Can't apply <span class="css">CSS</span> from outside</h2>
           <h2 class="fragment">No more <span class="css">::shadow</span> and <span class="css">/deep/</span></h2>
           <h2 class="fragment">Except <span class="css">CSS</span> variables</h2>
           <h2 class="fragment">:host</h2>
@@ -308,13 +319,6 @@
           <h2>Open vs Closed <span class="css">shadow</span></h2>
           <h3 class="fragment">Shadow root's internal accessible from <span class="js">JS</span></h3>
           <h2 class="fragment">Apple want closed, rest want open</h2>
-        </section>
-
-        <section>
-          <h1 class="slot">Content projection</h1>
-          <h1 class="fragment"><span class="html">HTML</span> input</h1>
-          <h1 class="fragment slot">Slot</h1>
-          <h1 class="fragment">Named <span class="slot">Slots</span></h1>
         </section>
 
         <section>
@@ -344,8 +348,8 @@
           <h1>Material design</h1>
           <!-- <h2 class="fragment">Component library</h2> -->
           <h2 class="fragment">
-            <span class="angular">Angular material</span>, <span class="vue">Vuetify</span>,
-            <span class="react">Material UI</span>
+            <span class="angular">Angular material,</span> <span class="vue fragment">Vuetify,</span>
+            <span class="react fragment">Material UI</span>
           </h2>
           <h2 class="fragment">The same code more than 3 times...</h2>
           <h3 class="fragment web-components">material-components-web-components</h3>
@@ -360,9 +364,9 @@
 
         <section>
           <h1>Compile to <span class="web-components">web components</span></h1>
-          <h2 class="fragment"><span class="angular">Angular</span> and <span class="vue">Vue</span></h2>
-          <h3 class="fragment">Can use <span class="frameworks">framework</span> features</h3>
-          <h3 class="fragment">Significantly bigger bundle</h3>
+          <h1 class="fragment"><span class="angular">Angular</span> and <span class="vue">Vue</span></h1>
+          <h2 class="fragment">Can use <span class="frameworks">framework</span> features</h2>
+          <h2 class="fragment">Significantly bigger bundle</h2>
         </section>
 
         <section>
@@ -395,8 +399,9 @@
             <h1>No <span class="html">HTML</span> loop</h1>
           </section>
           <section>
-            <h2>Cant call class function from <span class="html">template</span></h2>
+            <h2>Can't call class function from <span class="html">template</span></h2>
           </section>
+
           <section>
             <h1>No <span class="html">HTML</span> import</h1>
             <h2 class="fragment">Can do fetch request</h2>
@@ -424,7 +429,7 @@
 
         <section class="black-stroke" data-background="media/stock/adventureOver.jpeg">
           <h1 class="fragment">Thanks for listening!</h1>
-          <h2 class="fragment">Jan Greger Hemb</h2>
+          <!-- <h2 class="fragment">Jan Greger Hemb</h2> -->
           <h1 class="fragment"><span class="bcc">Curious</span> Programming</h1>
         </section>
       </div>
