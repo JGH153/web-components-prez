@@ -247,8 +247,20 @@
           <h2 class="">Everything you need to know</h2>
         </section>
 
+        <section>
+          <h2>What is a <span class="web-components">component</span>?</h2>
+          <h2 class="fragment">Self contained</h2>
+          <h2 class="fragment"><span class="css">Visual</span> and <span class="js">interactive</span></h2>
+          <h2 class="fragment">
+            <span class="html">View</span>, <span class="css">Styling</span> and <span class="js">Logic</span>
+          </h2>
+          <h2 class="fragment">Re-usable</h2>
+          <!-- like and then show ptr scr on material design elements -->
+        </section>
+
         <section class="smallerH1">
-          <h1 class="js">Custom elements (JS)</h1>
+          <h1 class="">Web Components</h1>
+          <h1 class="fragment js">Custom elements (JS)</h1>
           <h1 class="html fragment">HTML templates (HTML)</h1>
           <h1 class="css fragment">Shadow DOM (CSS)</h1>
         </section>
@@ -259,59 +271,70 @@
 
         <section>
           <h1>Low level</h1>
-          <h1 class="fragment">A lot of control</h1>
-          <h3 class="fragment">Exist to solve the problem of reusable components</h3>
+          <h1 class="fragment">A lot of <span class="js">control</span></h1>
+          <h2 class="fragment">Re-usable <span class="web-components">components</span></h2>
         </section>
 
         <section>
-          <h1>Can use everywhere</h1>
-          <h2 class="fragment">In all frameworks</h2>
-          <h3 class="fragment"><span class="angular">Angular</span> and <span class="vue">Vue</span> can compile to <span class="web-components">web components</span></h3>
+          <h1>Write once</h1>
+          <h1 class="fragment">Use everywhere</h1>
+          <h1 class="fragment">In all <span class="frameworks">frameworks</span></h1>
+          <div class="flexrox">
+            <img src="media/logos/vue1.png" class="framework-img fragment" />
+            <img src="media/logos/angular1.png" class="framework-img fragment" />
+            <img src="media/logos/react.png" class="framework-img fragment" />
+          </div>
         </section>
 
-        <section>
-          <h2>Parts of <span class="angular">Angular</span> similar to <span class="web-components">web&nbsp;components</span></h2>
-          <h2>Easier to learn</h2>
-          <!-- examples -->
-          <!-- view encapsulation -->
-          <!-- input and putputs -->
-          <!-- components -->
-        </section>
+        <!-- <section> -->
+        <!-- <h2>Parts of <span class="angular">Angular</span> similar to <span class="web-components">web&nbsp;components</span></h2> -->
+        <!-- <h2>Easier to learn</h2> -->
+        <!-- examples -->
+        <!-- view encapsulation -->
+        <!-- input and putputs -->
+        <!-- components -->
+        <!-- </section>74 -->
 
         <section>
+          <h1>Performance</h1>
+          <h2 class="fragment">Native <span class="web-components">components</span></h2>
+          <h2 class="fragment">Tiny bundle size</h2>
+          <h2 class="fragment">Amazing runtime performance</h2>
+        </section>
+
+        <!-- <section>
           <h2>Can use each <span class="web-components">web component</span> feature separately</h2>
           <h2 class="js fragment">Custom elements (JS)</h2>
           <h2 class="html fragment">HTML templates (HTML)</h2>
           <h2 class="css fragment">Shadow DOM (CSS)</h2>
           <h2 class="fragment">Meant to be used together</h2>
-        </section>
+        </section> -->
 
         <section>
           <h2>Open vs Closed <span class="css">shadow</span></h2>
-          <h3 class="fragment">shadow root's internal accessible from <span class="js">JS</span></h3>
+          <h3 class="fragment">Shadow root's internal accessible from <span class="js">JS</span></h3>
           <h2 class="fragment">Apple want closed, rest want open</h2>
         </section>
 
         <section>
-          <h1>Inputs and outputs</h1>
-          <h2 class="fragment">Inputs as attributes</h2>
-          <h2 class="fragment">Outputs as events</h2>
-          <h2 class="fragment">DO NOT pass functions</h2>
-          <h2 class="fragment">Harder to test, less modular, and reusable</h2>
-        </section>
-
-        <section>
-          <h2>Will become a core way to build websites</h2>
-          <h2 class="fragment">or the core of front end frameworks</h2>
+          <h1><span class="attribute">Inputs</span> and <span class="event">outputs</span></h1>
+          <h2 class="fragment">Inputs as <span class="attribute">attributes</span></h2>
+          <h2 class="fragment">Outputs as <span class="event">events</span></h2>
+          <h2 class="fragment">DO NOT pass <span class="function">functions</span></h2>
+          <h3 class="fragment">
+            Harder to test<span class="fragment">, less modular</span><span class="fragment">, and re-usable</span>
+          </h3>
         </section>
 
         <section>
           <h1>Material design</h1>
-          <h2 class="fragment">Component library</h2>
-          <h2 class="fragment">In <span class="angular">Angular</span>, <span class="vue">Vue</span>, <span class="react">React</span></h2>
+          <!-- <h2 class="fragment">Component library</h2> -->
+          <h2 class="fragment">
+            <span class="angular">Angular material</span>, <span class="vue">Vuetify</span>,
+            <span class="react">Material UI</span>
+          </h2>
           <h2 class="fragment">The same code more than 3 times...</h2>
-          <h2 class="fragment">Why not write once?</h2>
-          <h2 class="fragment">material-components-web-components</h2>
+          <h3 class="fragment web-components">material-components-web-components</h3>
         </section>
 
         <section>
@@ -323,32 +346,34 @@
             <img src="media/browsers/edge.svg" class="browser-img fragment" />
             <img src="media/browsers/safari.svg" class="browser-img fragment" />
           </div>
-          <h2 class="fragment">Good, but no IE</h2>
+          <h2 class="fragment">Good, but no <span class="ie">IE</span></h2>
         </section>
 
-        <section>
+        <!-- <section>
           <h2>Can extend existing elements like div</h2>
-          <!-- show example! -->
-          <h2 class="fragment">Will only focus on fully <span class="js">custom elements</span>
+          <h2 class="fragment">Will only focus on fully <span class="js">custom elements</span></h2>
+        </section> -->
+
+        <section>
+          <h1><span class="html">Template</span> vs <span class="html">innerHTML</span></h1>
+          <h3 class="fragment"><span class="html">innerHTML</span> breaks separation of concerns</h3>
+          <h2 class="fragment"><span class="html">innerHTML</span> is ugly</h2>
         </section>
 
         <section>
-          <h1><span class="html">Template</span> vs innerHTML</h1>
-          <h3 class="fragment">innerHTML is ugly nnd breaks separation of concerns</h3>
-        </section>
-
-        <section>
-          <h1>Slot</h1>
-          <h1 class="fragment">Slots name</h1>
+          <h1 class="slot">Content projection</h1>
+          <h1 class="fragment"><span class="html">HTML</span> input</h1>
+          <h1 class="fragment slot">Slot</h1>
+          <h1 class="fragment">Named <span class="slot">Slots</span></h1>
         </section>
 
         <section>
           <h1><span class="css">ShadowDom</span></h1>
-          <h2 class="fragment">Cant apply CSS from outside</h2>
-          <h2 class="fragment">No more ::shadow and /deep/</h2>
+          <h2 class="fragment">Cant apply <span class="css">CSS</span> from outside</h2>
+          <h2 class="fragment">No more <span class="css">::shadow</span> and <span class="css">/deep/</span></h2>
           <h2 class="fragment">Except <span class="css">CSS</span> variables</h2>
           <h2 class="fragment">:host</h2>
-          <h2 class="fragment">Load from <span class="html">template</span> or js class</h2>
+          <h2 class="fragment">Load from <span class="html">template</span> or <span class="js">js</span> class</h2>
         </section>
         <section>
           <h1>Use :host()</h1>
@@ -356,17 +381,20 @@
         </section>
 
         <section>
+          <h1>Compile to <span class="web-components">web components</span></h1>
+          <h2 class="fragment"><span class="angular">Angular</span> and <span class="vue">Vue</span></h2>
+          <h3 class="fragment">Can use <span class="frameworks">framework</span> features</h3>
+          <h3 class="fragment">Significantly bigger bundle</h3>
+        </section>
+
+        <section>
           <section>
-            <h1>Tips n tricks</h1> 
-            <h2 class="fragment">Smaller projects</h2>
+            <h1>Tips n tricks</h1>
           </section>
           <section>
-            <h2>Style classes, not elements names</h2>
+            <h2>Style <span class="css">classes</span>, not <span class="web-components">elements</span></h2>
             <h2 class="fragment">Will not be changed by auto rename</h2>
-          </section>
-          <section>
-            <h1>Tips n tricks</h1> 
-            <h2 class="fragment">For bigger projects</h2>
+            <h2 class="fragment"><span class="css">CSS</span> class can describe</h2>
           </section>
           <section>
             <h1 class="">Use <span class="scss">SCSS</span></h1>
@@ -374,8 +402,8 @@
           </section>
 
           <section>
-            <h2>Consider using framework on top </h2>
-            <h2 class="fragment">like Polymer Project</h2>
+            <h2>Consider using a framework on top</h2>
+            <h2 class="fragment">like <span class="polymer">Polymer Project</span></h2>
             <h2 class="fragment">or Stencil.js</h2>
             <h2 class="fragment">Or create the next big framework</h2>
           </section>
@@ -391,28 +419,32 @@
           <section>
             <h2>Cant call class function from <span class="html">template</span></h2>
           </section>
-          <section>
+          <!-- <section>
             <h2>Two different elements can share one class</h2>
-          </section>
+          </section> -->
           <section>
             <h1>No <span class="html">HTML</span> import</h1>
             <h2 class="fragment">Can do fetch request</h2>
             <h2 class="fragment">Build system</h2>
             <h2 class="fragment">No easy solution</h2>
+            <h2 class="fragment html">HTML Modules</h2>
           </section>
           <section>
-            <h2>Global styles, normalize and reset</h2>
+            <h2>Global <span class="css">styles</span>, normalize and reset</h2>
             <h2 class="fragment">Do not penetrate <span class="css">ShadowDom</span></h2>
-            <h2 class="fragment">Need to apply manually to all components</h2>
-            <h2 class="fragment">Will get solution in future like (<span class="css">CSS</span> modules? Themes?)</h2>
+            <h2 class="fragment">Need to apply manually to all <span class="web-components">components</span></h2>
+            <h2 class="fragment">Will get solution in future</h2>
+            <h2 class="fragment"><span class="css">CSS</span> modules? Themes?</h2>
           </section>
           <section>
-            <h2>Not opinionated, up to you</h2>
+            <h1>Not opinionated</h1>
+            <h1 class="fragment">Up to you</h1>
           </section>
         </section>
 
         <section>
-          <h1>Conclusion?</h1>
+          <h2>Will become a core way to build websites</h2>
+          <h2 class="fragment">At the core of front end frameworks</h2>
         </section>
 
         <section class="black-stroke" data-background="media/stock/adventureOver.jpeg">
