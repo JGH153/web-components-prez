@@ -8,30 +8,23 @@ class CardComponent extends HTMLElement {
   constructor() {
     // Always call super first in constructor
     super();
-    console.log('CardComponent constructor')
 
     this.setupShadow();
-    // this.addCssDynamic();
   }
 
   connectedCallback() {
-    console.log('CardComponent connected');
     this.setupClickListener();
   }
 
   disconnectedCallback() {
-    console.log('CardComponent disconnected');
     const button = this.shadow.getElementById('remove-button');
     button.removeEventListener('click', (e) => this.cardClicked());
   }
 
-  adoptedCallback() {
-    console.log('CardComponent adoptedCallback');
-  }
+  adoptedCallback() {}
 
   //called before constructor
   static get observedAttributes() {
-    console.log('CardComponent observedAttributes');
     return [CardComponent.imageNameAttrName];
   }
 
@@ -47,7 +40,7 @@ class CardComponent extends HTMLElement {
     this.shadow = this.attachShadow({ mode: 'open' });
     const template = document.getElementById('card-template');
     const templateContent = template.content;
-    const shadowRoot = this.shadow.appendChild(templateContent.cloneNode(true));
+    this.shadow.appendChild(templateContent.cloneNode(true));
   }
 
   addCssDynamic() {
@@ -66,7 +59,6 @@ class CardComponent extends HTMLElement {
   }
 
   cardClicked() {
-    console.log('clicked!', this.cardTitle);
     var event = new Event('DeleteCard');
     this.dispatchEvent(event); // not on shadow, but on this root element
   }

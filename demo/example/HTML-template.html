@@ -10,12 +10,19 @@
   <body>
 		<!-- Rendered -->
 		<p>Outside</p>
-		<my-element></my-element>
+		<my-element>
+      <p slot="title">My Title</p>
+      <p slot="content">My Content</p>
+    </my-element>
 
 		<!-- Not rendered -->
-    <template id="html-template">
-			<link rel="stylesheet" href="Shadow.css"></link>
-      <p>Inside</p>
+    <template id="my-element-template">
+      <link rel="stylesheet" href="Shadow.css"></link>
+      
+      <h1>
+        <slot name="title"></slot>
+      </h1>
+      <slot name="content"></slot>
 		</template>
 		
 		<!-- Need to import after template declared -->

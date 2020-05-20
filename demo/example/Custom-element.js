@@ -28,7 +28,7 @@ class MyElement extends HTMLElement {
 
 	setupShadow() {
     this.shadow = this.attachShadow({ mode: 'open' });
-    const template = document.getElementById('html-template');
+    const template = document.getElementById('my-element-template');
     const templateContent = template.content;
     const shadowRoot = this.shadow.appendChild(templateContent.cloneNode(true));
   }

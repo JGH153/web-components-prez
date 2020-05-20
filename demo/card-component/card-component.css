@@ -17,6 +17,12 @@
   font-size: 25px;
 }
 
+.card-title {
+  margin-bottom: 12px;
+  font-size: 20px;
+  display: block;
+}
+
 .image {
   image-orientation: from-image;
   width: calc(100% + 32px);
@@ -40,12 +46,6 @@
 
 .card-header-text {
   margin: 0 16px;
-}
-
-.card-title {
-  margin-bottom: 12px;
-  font-size: 20px;
-  display: block;
 }
 
 .card-subtitle {
