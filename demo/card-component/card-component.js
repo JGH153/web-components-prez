@@ -53,15 +53,39 @@ class CardComponent extends HTMLElement {
     this.shadow.appendChild(linkElem);
   }
 
+
+
+
+
+
+
+
+  
+
   setupClickListener() {
     const button = this.shadow.getElementById('remove-button');
     button.addEventListener('click', (e) => this.cardClicked());
   }
 
   cardClicked() {
-    var event = new Event('DeleteCard');
+    const event = new Event('DeleteCard');
     this.dispatchEvent(event); // not on shadow, but on this root element
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   updateImage() {
     const image = this.shadow.getElementById('card-img');

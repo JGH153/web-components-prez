@@ -7,7 +7,6 @@ class MyElement extends HTMLElement {
     console.log('CardComponent constructor')
 
     this.setupShadow();
-    // this.addCssDynamic();
 	}
 	
 	connectedCallback() {
