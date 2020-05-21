@@ -1,5 +1,9 @@
 /* This css file is global */
 
+:root {
+  --primary-color: white;
+}
+
 html,
 body {
   height: 100%;
